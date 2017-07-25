@@ -1,0 +1,16 @@
+// FUNCTIONS USED FOR PRODUCING RGBA OPACITY VARIATIONS
+
+// BLACK
+@function black($opacity) {
+	@return rgba(0, 0, 0, $opacity);
+}
+
+// WHITE
+@function white($opacity) {
+	@return rgba(255, 255, 255, $opacity);
+}
+
+// TRANSPARENT COLOR
+@function transparentColor($color, $opacity) {
+	@return rgba($color, $opacity);
+}

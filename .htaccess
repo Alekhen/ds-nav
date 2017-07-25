@@ -1,0 +1,14 @@
+Options -Indexes
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^.*$ ./index.php
+
+ErrorDocument 403 /403.php
+
+AddHandler php7-script .php
+
+AddType image/svg+xml svg
+AddType image/svg+xml svgz

@@ -1,0 +1,91 @@
+// LIBRARY DEFINITIONS
+
+// Image directory path from your compiled CSS files to the image files
+$imagePath: "../images/";
+$iconPath: "../icons/";
+
+// Base Font
+$baseFontFamily: "Roboto", sans-serif;
+$baseFontSize: 14;
+$baseLineHeight: 20;
+$baseFontWeight: 400;
+$baseFontWeightStrong: 500;
+
+// Header Font
+$headerFontFamily: $baseFontFamily;
+$headerFontWeight: 400;
+$headerFontWeightStrong: 500;
+
+// Color: Gray Series
+$gray50: #FAFAFA;
+$gray100: #F5F5F5;
+$gray200: #EEEEEE;
+$gray300: #E0E0E0;
+$gray400: #BDBDBD;
+$gray500: #9E9E9E;
+$gray600: #757575;
+$gray700: #616161;
+$gray800: #424242;
+$gray900: #212121;
+
+// General Color
+$bodyTextColor: $gray900;
+$bodyBackgroundColor: $gray50;
+$linkColor: $gray500;
+$linkHoverColor: $gray600;
+$selectionColor: white;
+$selectionBackgroundColor: $gray900;
+
+// General Form
+$formElementHeight: 34;
+$formElementFocusGlow: false;
+
+// Form Element: Input
+$inputTextColor: $gray900;
+$inputPlaceholderColor: $gray500;
+$inputBackgroundColor: white;
+$inputBorderColor: $gray500;
+$inputFocusBorderColor: $gray900;
+$inputFocusGlowColor: $gray900;
+$inputDisabledBackgroundColor: $gray100;
+$inputInvalidTextColor: $gray900;
+$inputInvalidBorderColor: $gray900;
+$inputInvalidFocusBorderColor: $gray900;
+$inputInvalidFocusGlowColor: $gray900;
+$inputBorderRadius: 2px;
+
+// Form Element: Select
+$selectTextColor: $inputTextColor;
+$selectBackgroundColor: $inputBackgroundColor;
+$selectBorderColor: $inputBorderColor;
+$selectFocusGlowColor: $inputFocusGlowColor;
+$selectDisabledBackgroundColor: $inputDisabledBackgroundColor;
+$selectInvalidTextColor: $inputInvalidTextColor;
+$selectInvalidBorderColor: $inputInvalidBorderColor;
+$selectInvalidFocusBorderColor: $inputInvalidFocusBorderColor;
+$selectInvalidFocusGlowColor: $inputInvalidFocusGlowColor;
+$selectBorderRadius: $inputBorderRadius;
+
+// Form Element: Textarea
+$textareaTextColor: $inputTextColor;
+$textareaPlaceholderColor: $inputPlaceholderColor;
+$textareaBackgroundColor: $inputBackgroundColor;
+$textareaBorderColor: $inputBorderColor;
+$textareaFocusBorderColor: $inputFocusBorderColor;
+$textareaFocusGlowColor: $inputFocusGlowColor;
+$textareaDisabledBackgroundColor: $inputDisabledBackgroundColor;
+$textareaInvalidTextColor: $inputInvalidTextColor;
+$textareaInvalidBorderColor: $inputInvalidBorderColor;
+$textareaInvalidFocusBorderColor: $inputInvalidFocusBorderColor;
+$textareaInvalidFocusGlowColor: $inputInvalidFocusGlowColor;
+$textareaBorderRadius: $inputBorderRadius;
+
+// Buttons
+$buttonTextColor: white;
+$buttonBackgroundColor: $gray500;
+$buttonBorderColor: $gray500;
+$buttonHoverBackgroundColor: $gray600;
+$buttonHoverBorderColor: $gray600;
+$buttonActiveBackgroundColor: $gray500;
+$buttonActiveBorderColor: $gray500;
+$buttonBorderRadius: $inputBorderRadius;

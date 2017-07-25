@@ -1,0 +1,37 @@
+/* -------------------- GIANT BREAKPOINT RULES -------------------- */
+@media only (min-width: 1441px) {
+
+#navigation {
+  &.collapsed {
+    @include flex(0 0 230px);
+    li {
+      a {
+        span {
+          &.nav-label {
+            opacity: 1;
+          }
+          &.nav-more {
+            opacity: 1;
+          }
+        }
+        &:hover {
+          span {
+            &.nav-more {
+              opacity: 1;
+            }
+          }
+        }
+        &.sub-nav-indicator {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+#navigation-controls {
+  display: none;
+}
+
+}

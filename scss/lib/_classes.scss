@@ -1,0 +1,215 @@
+// HTML CLASS STYLING
+
+/* -------------------- ELEMENT DISPLAY STYLES -------------------- */
+.hidden {
+	display: none !important;
+}
+
+
+/* -------------------- ELEMENT POSITION STYLES -------------------- */
+.fixed {
+	position: fixed !important;
+}
+.relative {
+	position: relative !important;
+}
+.absolute {
+	position: absolute !important;
+}
+.left {
+	@include settings(relative, null, null, left);
+}
+.right {
+	@include settings(relative, null, null, right);
+}
+.center {
+	@include settings(relative);
+	margin-left: auto;
+	margin-right: auto;
+}
+.alignleft {
+	@extend .left;
+	margin: #{$baseLineHeight}px #{$baseLineHeight}px #{$baseLineHeight}px 0;
+}
+.alignright {
+	@extend .right;
+	margin: #{$baseLineHeight}px 0 #{$baseLineHeight}px #{$baseLineHeight}px;
+}
+.aligncenter {
+	@extend .center;
+	@include settings(null, null, block);
+}
+.alignnone {
+	@extend .aligncenter;
+}
+
+
+/* -------------------- TYPOGRAPHIC STYLES -------------------- */
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-center {
+	text-align: center;
+}
+.hide-text {
+	text-indent: -9999px;
+	@include settings(null, hidden);
+}
+.bold {
+	font-weight: bold;
+}
+.strong {
+	@extend strong;
+}
+.italic {
+	font-style: italic;
+}
+.em {
+	@extend em;
+}
+.underline {
+	text-decoration: underline;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.lowercase {
+	text-transform: lowercase;
+}
+.h1 {
+	@extend h1;
+}
+.h2 {
+	@extend h2;
+}
+.h3 {
+	@extend h3;
+}
+.h4 {
+	@extend h4;
+}
+.h5 {
+	@extend h5;
+}
+.h6 {
+	@extend h6;
+}
+.text-display-4 {
+  //color: $gray500;
+  @include font(112, 112, 300, $headerFontFamily);
+  letter-spacing: -0.01em;
+  strong {
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+.text-display-3 {
+  //color: $gray500;
+  @include font(56, 56, 400, $headerFontFamily);
+  letter-spacing: -0.005em;
+}
+.text-display-2 {
+  //color: $gray500;
+  @include font(45, 48, 400, $headerFontFamily);
+  letter-spacing: 0em;
+}
+.text-display-1 {
+  //color: $gray500;
+  @include font(34, 40, 400, $headerFontFamily);
+  letter-spacing: 0em;
+}
+.text-headline {
+  //color: $gray900;
+  @include font(24, 32, 400, $headerFontFamily);
+  letter-spacing: 0em;
+}
+.text-title {
+  //color: $gray900;
+  @include font(20, 20, 500, $headerFontFamily);
+  letter-spacing: 0.005em;
+}
+.text-subheading {
+  //color: $gray900;
+  @include font(16, 28, 400, $headerFontFamily);
+  letter-spacing: 0.01em;
+}
+.text-body-2 {
+  //color: $gray900;
+  @include font(14, 24, 500, $headerFontFamily);
+  letter-spacing: 0.01em;
+}
+.text-body-1 {
+  //color: $gray900;
+  @include font(14, 20, 400, $headerFontFamily);
+  letter-spacing: 0.01em;
+}
+.text-caption {
+  color: $gray500;
+  @include font(12, 12, 400, $headerFontFamily);
+  letter-spacing: 0.02em;
+}
+.text-button {
+  //color: $gray900;
+  @include font(14, 14, 500, $headerFontFamily);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.text-tooltip {
+  //color: $gray900;
+  @include font(12, 14, 500, $headerFontFamily);
+  letter-spacing: 0.02em;
+}
+.quote {
+	&:before {
+		content: "“";
+	}
+	&:after {
+		content: "”";
+	}
+}
+.quote-italic {
+	@extend .quote;
+	font-style: italic;
+}
+
+
+/* -------------------- BUTTON LINK STYLES -------------------- */
+.button {
+	color: $buttonTextColor;
+	@include font($baseFontSize, $formElementHeight, $baseFontWeight, $baseFontFamily);
+	font-size: 100%;
+	vertical-align: middle;
+	background-color: $buttonBackgroundColor;
+	@include settings(relative, null, inline-block);
+	*overflow: visible;
+	padding: 0 6px;
+	border-radius: $buttonBorderRadius;
+	border: 1px solid $buttonBorderColor;
+	outline: none;
+	cursor: pointer;
+	//-webkit-appearance: button;
+	@include transition(all 200ms ease);
+	&::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+	&:hover {
+		color: $buttonTextColor;
+		text-decoration: none;
+		background-color: $buttonHoverBackgroundColor;
+		border-color: $buttonHoverBorderColor;
+	}
+	&:active {
+		color: $buttonTextColor;
+		text-decoration: none;
+		background-color: $buttonActiveBackgroundColor;
+		border-color: $buttonActiveBorderColor;
+		@include transition(none);
+	}
+}
+.btn {
+	@extend .button;
+}
