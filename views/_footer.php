@@ -3,8 +3,12 @@
  * App footer
  */
 
+$nav_collapsed = ( !empty( $Route->query['nav'] ) && $Route->query['nav'] === '1' ) ? true : false;
+
 ?>
-    </div><!--#main-->
+      </div><!--#main-->
+
+    </div><!--#content-container-->
 
   </section><!--#content-->
 
@@ -12,6 +16,7 @@
 
 <div id="tooltip" class="text-tooltip">Search</div>
 <div id="browser-size" class="text-subheading"></div>
+<div id="overlay" class="<?= !$nav_collapsed ? 'active' : '' ?>"></div>
 
 <script src="<?= SITE_URL ?>/js/ds-nav.js"></script>
 

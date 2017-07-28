@@ -1,6 +1,15 @@
 /* -------------------- MEDIUM BREAKPOINT RULES -------------------- */
 @media only (min-width: 769px) and (max-width: 1024px) {
 
+  #navigation {
+    @include box-shadow(0px 3px 5px -1px black(0.2), 0px 6px 10px 0px black(0.14), 0px 1px 18px 0px black(0.12));
+    &.collapsed {
+      @include box-shadow(none);
+    }
+  }
 
+  #navigation-placeholder {
+    @include flex(0 0 44px);
+  }
 
 }

@@ -2,3 +2,9 @@
 /**
  * Controls navigation
  */
+
+class Nav {
+
+  
+
+}

@@ -3,7 +3,7 @@
 
 #navigation {
   &.collapsed {
-    @include flex(0 0 230px);
+    @include size(230);
     li {
       a {
         span {
@@ -32,6 +32,11 @@
 }
 #navigation-controls {
   display: none;
+}
+#navigation-placeholder {
+  &.collapsed {
+    @include flex(0 0 230px);
+  }
 }
 
 }

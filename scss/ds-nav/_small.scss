@@ -1,6 +1,38 @@
 /* -------------------- SMALL BREAKPOINT RULES -------------------- */
 @media only (min-width: 601px) and (max-width: 768px) {
 
+  #tooltip {
+    display: none;
+  }
+
+
+  #utility-bar {
+    padding-left: 0px;
+  }
+  #navigation-icon {
+    display: inline;
+  }
+
+
+  #navigation {
+    @include box-shadow(0px 3px 5px -1px black(0.2), 0px 6px 10px 0px black(0.14), 0px 1px 18px 0px black(0.12));
+    top: -44px;
+    padding-top: 44px;
+    &.collapsed {
+      @include flex(0 0 0px);
+      width: 0px;
+      @include box-shadow(none);
+    }
+  }
+  #navigation-close {
+    display: block;
+  }
+  #navigation-controls {
+    display: none;
+  }
+  #navigation-placeholder {
+    display: none;
+  }
 
 
 }

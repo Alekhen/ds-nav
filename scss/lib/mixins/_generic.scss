@@ -88,19 +88,27 @@
 }
 
 // Used for adding either an inner shadow, drop shadow or both to an element
-@mixin box-shadow($param1, $param2:null) {
-	@if $param2 == null {
-		-ms-box-shadow: $param1;
-		-o-box-shadow: $param1;
-		-moz-box-shadow: $param1;
-		-webkit-box-shadow: $param1;
-		box-shadow: $param1;
+@mixin box-shadow($param1, $param2:null, $param3:null) {
+	@if $param3 == null {
+		@if $param2 == null {
+			-ms-box-shadow: $param1;
+			-o-box-shadow: $param1;
+			-moz-box-shadow: $param1;
+			-webkit-box-shadow: $param1;
+			box-shadow: $param1;
+		} @else {
+			-ms-box-shadow: $param1, $param2;
+			-o-box-shadow: $param1, $param2;
+			-moz-box-shadow: $param1, $param2;
+			-webkit-box-shadow: $param1, $param2;
+			box-shadow: $param1, $param2;
+		}
 	} @else {
-		-ms-box-shadow: $param1, $param2;
-		-o-box-shadow: $param1, $param2;
-		-moz-box-shadow: $param1, $param2;
-		-webkit-box-shadow: $param1, $param2;
-		box-shadow: $param1, $param2;
+		-ms-box-shadow: $param1, $param2, $param3;
+		-o-box-shadow: $param1, $param2, $param3;
+		-moz-box-shadow: $param1, $param2, $param3;
+		-webkit-box-shadow: $param1, $param2, $param3;
+		box-shadow: $param1, $param2, $param3;
 	}
 }
 

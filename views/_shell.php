@@ -19,6 +19,9 @@ $nav_query = $nav_collapsed ? 'nav=1' : 'nav=0';
 ?><div id="header" class="container">
 
   <section id="utility-bar" class="container" data-user="<?= USER_DATA['first_name'] . ' ' . USER_DATA['last_name'] ?>" data-user-first-name="<?= USER_DATA['first_name'] ?>" data-user-last-name="<?= USER_DATA['last_name'] ?>">
+    <div id="navigation-icon">
+      <button><?php include ICON_DIR . '/menu.svg'; ?></button>
+    </div>
     <div id="brand">
       <a href="<?= SITE_URL ?>" class="text-headline">Logo</a>
     </div>
@@ -32,6 +35,8 @@ $nav_query = $nav_collapsed ? 'nav=1' : 'nav=0';
 <div id="page" class="container">
 
   <section id="navigation" class="container<?= $nav_collapsed ? ' collapsed' : '' ?>">
+
+    <button id="navigation-close" class="ink"><?php include ICON_DIR . '/close.svg' ?></button>
 
     <div id="navigation-lists" class="container">
 
@@ -91,10 +96,14 @@ $nav_query = $nav_collapsed ? 'nav=1' : 'nav=0';
 
   <section id="content" class="container">
 
-    <div id="title-bar" class="container">
-      <div id="title">
-        <h1 class="text-subheading"><?= NAV_DATA[$query_p]['label'] ?></h1>
-      </div>
-    </div><!--#title-bar-->
+    <div id="navigation-placeholder" class="<?= $nav_collapsed ? 'collapsed' : '' ?>"></div>
 
-    <div id="main" class="container">
+    <div id="content-container" class="container">
+
+      <div id="title-bar" class="container">
+        <div id="title">
+          <h1 class="text-subheading"><?= NAV_DATA[$query_p]['label'] ?></h1>
+        </div>
+      </div><!--#title-bar-->
+
+      <div id="main" class="container">

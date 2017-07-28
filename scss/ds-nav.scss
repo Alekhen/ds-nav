@@ -71,6 +71,16 @@
   right: 0;
   @include border-radius-unique(2, 0, 0, 0);
 }
+#overlay {
+  @include bg(transparentColor($gray900, 0.5));
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: none;
+  position: fixed;
+  z-index: 100;
+}
 
 
 /* -------------------- HEADER -------------------- */
@@ -88,6 +98,7 @@
 /* -------------------- UTILITY BAR -------------------- */
 #utility-bar {
   color: white;
+  @include settings(relative);
   @include bg($gray900);
   width: 100%;
   height: 100%;
@@ -107,32 +118,56 @@
     color: white;
   }
 }
+#navigation-icon {
+  @include flex(0 0 24px);
+  height: 100%;
+  display: none;
+  padding-right: 12px;
+  button {
+    @include border-radius(0);
+    border: 0;
+    padding: 0 12px 0 12px;
+    margin: 0;
+    height: 100%;
+    @include bg(none);
+    -webkit-appearance: none;
+    font: initial !important;
+  }
+  svg {
+    fill: white;
+  }
+}
 #brand {
   @include flex(1 0 auto);
   padding: 6px 0;
+  height: 100%;
 }
 #user-menu {
   padding: 8px 0;
+  height: 100%;
 }
 
 
 /* -------------------- PAGE -------------------- */
 #page {
   height: 100%;
+  position: relative;
 }
 
 
 /* -------------------- NAVIGATION -------------------- */
 #navigation {
   color: $gray900;
-  @include settings(relative, hidden);
+  @include settings(absolute, hidden);
   @include flexbox-direction(column);
-  @include flex(0 0 230px);
+  @include flex(1 0 100%);
   @include bg($gray200);
+  @include size(230);
   height: 100%;
+  min-height: 100%;
   @include transition;
   &.collapsed {
-    @include flex(0 0 45px);
+    @include size(45);
     li {
       a {
         span {
@@ -283,6 +318,11 @@
     }
   }
 }
+#navigation-close {
+  display: none;
+  position: absolute;
+  top: 0;
+}
 #navigation-controls {
   @include flex(0 0 44px);
   ol {
@@ -330,9 +370,20 @@
 
 /* -------------------- CONTENT -------------------- */
 #content {
-  @include flexbox-direction(column);
   width: 100%;
   height: 100%;
+}
+#navigation-placeholder {
+  @include flex(0 0 230px);
+  height: 100%;
+  min-height: 100%;
+  @include transition;
+  &.collapsed {
+    @include flex(0 0 44px);
+  }
+}
+#content-container {
+  @include flexbox-direction(column);
 }
 
 
