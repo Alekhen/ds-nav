@@ -1,9 +1,7 @@
 <?php
-/**
- * App footer
- */
 
-$nav_collapsed = ( !empty( $Route->query['nav'] ) && $Route->query['nav'] === '1' ) ? true : false;
+$nav_collapsed = false;
+//$nav_collapsed = ( !empty( $Route->query['nav'] ) && $Route->query['nav'] === '1' ) ? true : false;
 
 ?>
       </div><!--#main-->
@@ -18,6 +16,6 @@ $nav_collapsed = ( !empty( $Route->query['nav'] ) && $Route->query['nav'] === '1
 <div id="browser-size" class="text-subheading"></div>
 <div id="overlay" class="<?= !$nav_collapsed ? 'active' : '' ?>"></div>
 
-<script src="<?= SITE_URL ?>/js/ds-nav.js"></script>
+<script src="<?= APP_URL ?>/js/ds-nav.js"></script>
 
 </body>

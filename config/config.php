@@ -1,11 +1,6 @@
 <?php
-/**
- * Site configuration
- */
 
-define( 'SITENAME', 'DS-Nav' );
+define( 'APP_NAME', 'DS Nav Prototype' );
 
-define( 'DEBUG_ROUTING', false );
-
-require_once dirname( __FILE__ ) . '/routes.php';
-require_once dirname( __FILE__ ) . '/loader.php';
+define( 'APP_URL', 'http://' . $_SERVER['HTTP_HOST'] );
+//define( 'APP_URL', '$_SER' );

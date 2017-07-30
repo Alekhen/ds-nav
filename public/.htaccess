@@ -1,0 +1,16 @@
+Options -MultiViews
+RewriteEngine On
+
+RewriteBase /public
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+#ErrorDocument 403 /403.php
+
+AddHandler php7-script .php
+
+AddType image/svg+xml svg
+AddType image/svg+xml svgz
