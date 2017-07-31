@@ -11,9 +11,9 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-  <link href="<?= APP_URL ?>/css/ds-nav.css" rel="stylesheet">
+  <link href="<?= PUBLIC_FILE_PATH ?>/css/ds-nav.css" rel="stylesheet">
 
-  <script src="<?= APP_URL ?>/js/jquery-3.2.1.min.js"></script>
+  <script src="<?= PUBLIC_FILE_PATH ?>/js/jquery-3.2.1.min.js"></script>
 
 </head>
 <body>

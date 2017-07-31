@@ -16,6 +16,6 @@ $nav_collapsed = false;
 <div id="browser-size" class="text-subheading"></div>
 <div id="overlay" class="<?= !$nav_collapsed ? 'active' : '' ?>"></div>
 
-<script src="<?= APP_URL ?>/js/ds-nav.js"></script>
+<script src="<?= PUBLIC_FILE_PATH ?>/js/ds-nav.js"></script>
 
 </body>
