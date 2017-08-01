@@ -4,6 +4,12 @@
   #tooltip {
     display: none;
   }
+  #overlay {
+    &.active {
+      opacity: 1;
+      left: 0;
+    }
+  }
 
 
   #utility-bar {
@@ -33,6 +39,5 @@
   #navigation-placeholder {
     display: none;
   }
-
 
 }

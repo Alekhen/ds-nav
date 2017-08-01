@@ -58,6 +58,7 @@
   left: 0px;
   opacity: 0;
   @include transition(opacity 300ms ease);
+  z-index: 1000;
   &.active {
     opacity: 1;
   }
@@ -77,9 +78,15 @@
   min-width: 100%;
   height: 100%;
   min-height: 100%;
-  display: none;
+  top: 0;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  display: block;
   position: fixed;
+  opacity: 0;
   z-index: 100;
+  @include transition(opacity 300ms ease);
 }
 
 
@@ -139,12 +146,28 @@
 }
 #brand {
   @include flex(1 0 auto);
-  padding: 6px 0;
   height: 100%;
+  a {
+    padding: 6px 0;
+    display: inline-block;
+  }
 }
 #user-menu {
-  padding: 8px 0;
   height: 100%;
+  span {
+    display: block;
+    &.user-account-name {
+      padding: 8px 0;
+    }
+    &.user-account-icon {
+      display: none;
+      svg {
+        fill: white;
+        @include size(24, 24);
+        padding: 10px;
+      }
+    }
+  }
 }
 
 
@@ -152,6 +175,7 @@
 #page {
   height: 100%;
   position: relative;
+  z-index: 200;
 }
 
 
@@ -166,6 +190,7 @@
   height: 100%;
   min-height: 100%;
   @include transition;
+  z-index: 200;
   &.collapsed {
     @include size(45);
     li {
@@ -224,7 +249,9 @@
   }
 }
 #navigation-lists {
-  @include settings(relative, hidden);
+  @include settings(relative);
+  overflow-x: hidden;
+  overflow-y: auto;
   @include flex(1 0 auto);
   .nav-list {
     @include settings(absolute, scroll);
@@ -317,11 +344,47 @@
       }
     }
   }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 #navigation-close {
+  color: $gray900;
   display: none;
   position: absolute;
   top: 0;
+  left: 0;
+  height: 44px;
+  width: 100%;
+  a {
+    color: $gray900;
+    display: block;
+    @include flexbox;
+    height: 100%;
+    span {
+      display: block;
+      @include transition(opacity 300ms ease);
+      &.nav-icon {
+        @include flex(0 0 auto);
+        @include size(24, 24);
+        padding: 10px;
+        margin-left: auto;
+        opacity: 0;
+        svg {
+          fill: $gray900;
+        }
+      }
+    }
+  }
+  &.active {
+    a {
+      span {
+        &.nav-icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 #navigation-controls {
   @include flex(0 0 44px);
@@ -383,6 +446,7 @@
   }
 }
 #content-container {
+  @include flex(1 1 auto);
   @include flexbox-direction(column);
 }
 
@@ -420,6 +484,7 @@
 /* -------------------- MAIN -------------------- */
 #main {
   @include flexbox-wrap(wrap);
+  @include flexbox-justify(center);
   padding: 10px;
   margin: 0 auto;
   .widget {

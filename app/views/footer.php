@@ -1,9 +1,3 @@
-<?php
-
-$nav_collapsed = false;
-//$nav_collapsed = ( !empty( $Route->query['nav'] ) && $Route->query['nav'] === '1' ) ? true : false;
-
-?>
       </div><!--#main-->
 
     </div><!--#content-container-->
@@ -14,7 +8,6 @@ $nav_collapsed = false;
 
 <div id="tooltip" class="text-tooltip">Search</div>
 <div id="browser-size" class="text-subheading"></div>
-<div id="overlay" class="<?= !$nav_collapsed ? 'active' : '' ?>"></div>
 
 <script src="<?= PUBLIC_FILE_PATH ?>/js/ds-nav.js"></script>
 

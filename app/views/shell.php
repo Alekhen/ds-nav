@@ -13,7 +13,8 @@ $nav = $data['NavData'];
       <a href="<?=APP_URL?>" class="text-headline">Logo</a>
     </div>
     <div id="user-menu">
-      <span class="text-subheading"><?=$user['first_name'].' '.$user['last_name'] ?></span>
+      <span class="user-account-name text-subheading"><?=$user['first_name'].' '.$user['last_name'] ?></span>
+      <span class="user-account-icon" data-icon="account-circle"><?=$this->icon('account-circle')?></span>
     </div>
   </section><!--#utility-bar-->
 
@@ -21,9 +22,15 @@ $nav = $data['NavData'];
 
 <div id="page" class="container">
 
+  <div id="overlay" class="active"></div>
+
   <section id="navigation" class="container<?= !APP_ICONS_ACTIVE ? ' no-icons' : '' ?>">
 
-    <button id="navigation-close" class="ink"><?=$this->icon('close', true)?></button>
+    <div id="navigation-close" class="active">
+      <a class="container nav-close ink" href="<?=APP_URL?>">
+        <span class="nav-icon" data-icon="close"><?=$this->icon('close', true)?></span>
+      </a>
+    </div><!--#navigation-close-->
 
     <div id="navigation-lists" class="container">
 
